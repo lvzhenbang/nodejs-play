@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>slider</title>
+	<link rel="stylesheet" type="text/css" href="css/slider.css">
+</head>
+<body>
+	<div class="slider">
+		<div class="slider-main" id="template-main">
+			<div class="slider-main-item {{css}}" id="main-{{slider}}">
+				<div class="item-caption">
+					<h3>{{h3}}</h3>
+					<h1>{{h1}}</h1>
+				</div>
+				<img src="images/{{slider}}.jpg" class="item-picture">
+			</div>
+		</div>
+		<div class="slider-ctrl" id="template-ctrl">
+			<a href="javascript:switchSlider({{slider}});" class="slider-ctrl-item active" id="ctrl-{{slider}}">
+				<img src="images/{{slider}}.jpg">
+			</a>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/slider.js"></script>
+</body>
+</html>

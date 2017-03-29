@@ -1,0 +1,109 @@
+{
+  "music":[
+    {
+      "title":"画 (Live Piano Session II)",
+      "url":"http://music.163.com/#/song?id=412911436"
+    },
+    {
+      "title":"Far Away From Home",
+      "url":"http://music.163.com/#/song?id=4083399"
+    },
+    {
+      "title":"Stay Here Forever",
+      "url":"http://music.163.com/#/song?id=18836961"
+    },
+    {
+      "title":"Wild Wild Web",
+      "url":"http://music.163.com/#/song?id=1600454"
+    },
+    {
+      "title":"ALWAYS",
+      "url":"http://music.163.com/#/song?id=403012582"
+    },
+    {
+      "title":"Faded",
+      "url":"http://music.163.com/#/song?id=466817849"
+    },
+    {
+      "title":"A Little Reminder",
+      "url":"http://music.163.com/#/song?id=2587251"
+    },
+    {
+      "title":"Five Hundred Miles",
+      "url":"http://music.163.com/#/song?id=27759600"
+    },
+    {
+      "title":"Liekkas",
+      "url":"http://music.163.com/#/song?id=3413895"
+    },
+    {
+      "title":"Valder Fields",
+      "url":"http://music.163.com/#/song?id=2001320"
+    },
+    {
+      "title":"If I Die Young",
+      "url":"http://music.163.com/#/song?id=28157586"
+    },
+    {
+      "title":"Rising Girl",
+      "url":"http://music.163.com/#/song?id=4164317"
+    },
+    {
+      "title":"말해! 뭐해?",
+      "url":"http://music.163.com/#/song?id=417859045"
+    },
+    {
+      "title":"TALK",
+      "url":"http://music.163.com/#/song?id=41554649"
+    },
+    {
+      "title":"Hello",
+      "url":"http://music.163.com/#/song?id=33211676"
+    },
+    {
+      "title":"Miracle In The Middle Of My Heart (Original Mix)",
+      "url":"http://music.163.com/#/song?id=36492196"
+    }
+
+  ],
+  "text": [
+    {
+      "title":"markdown简明教程",
+      "url":"https://github.com/CompileYouth/front-end-study/blob/master/tool/markdown/Markdown-Learning.md",
+      "description":"本教程描述了一个简单的排版语言markdown，经常在github上做开源项目的对该语言会有相当程度的了解。",
+      "summarize":"这是一门很有趣的语言简单易用。"
+    },
+    {
+      "title":"vue-router2",
+      "url":"http://router.vuejs.org/zh-cn/index.html",
+      "description":"使用 Vue.js + vue-router 使得创建单页应用变得容易起来。使用 Vue.js 时，我们已经把组件组合成一个应用了，当要把 vue-router 加进来，只需要配置组件和路由映射，然后告诉 vue-router 在哪里渲染它们。",
+      "summarize":"router让你的单页面应用逻辑变得更清晰，同时使用它可以实现避免页面的刷新，又可以跳转到新的界面的效果。"
+    }
+  ],
+  "demo":[
+    {
+      "title":"lazyLoad的另外一种实现形式progressive",
+      "url":"https://github.com/lvzhenbang/lazyload",
+      "description":"这中方式加载图片的原理是首先为页面所有图片加载一个分辨率特别小的图片，在页面中先当与占位符的作用。在我的这个案例中使用了vuejs哟！详情请点击链接地址",
+      "summarize":"优势：用户体验效果更好。　缺点：增加用户的流量。"
+    },
+    {
+      "title":"仿购物车案例",
+      "url":"https://github.com/lvzhenbang/shopping",
+      "description":"这是我在慕课网上看到的一个案例，由于刚接触到vuejs，需要一个案例来练手所以，就将这个demo拿了过来进行了补充完善，不足之处望各位大婶指教。因为要体验实践ＥＳ６语法，所以，代码使用的ＥＳ５和ＥＳ６相结合的写法，不妥之处望各位见谅。",
+      "summarize":"通过实例操作，感觉是真应了那句老话‘看十遍，不如写一遍’，只觉得‘纸上得来终觉浅，绝知此事要躬行’。　＿＾＾＿　～"
+    },
+    {
+      "title":"vue-router 嵌套",
+      "url":"https://github.com/lvzhenbang/vue-router-demo",
+      "description":"v-router实现页面的自由跳转",
+      "summarize":"做一个路由嵌套的demo试一下手。"
+    },
+    {
+      "title":"关于我这个个人blog",
+      "url":"地址暂无，正在完善中",
+      "description":"这个是我接触、了解、认识、使用、研究后的第一个使用Vuejs做的比较全面的案例，在这个案例中我是用了vue, vue-router, vue-resource, axios, vue-infinite-scrol, vuex等技术点后的一个比较全的案例。",
+      "summarize":"这个案例的实现让我对vuejs有了更深的认识，也使得我将vuejs相关的知识点串了起来。"
+    }
+  ]
+}

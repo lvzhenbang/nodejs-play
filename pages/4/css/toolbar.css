@@ -1,0 +1,89 @@
+.toolbar-item,
+.toolbar-ewm {
+  display: block;
+  background: url("../images/toolbar.png") no-repeat;
+}
+
+.toolbar {
+  position: fixed;
+  right: 50%;
+  bottom: 10px;
+  width: 52px;
+  margin-left: -26px;
+}
+.toolbar .toolbar-item {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  margin-top: 1px;
+  -webkit-transition: background 1s;
+  -moz-transition: background 1s;
+  -ms-transition: background 1s;
+  -o-transition: background 1s;
+  transition: background 1s;
+}
+.toolbar .toolbar-item:hover .toolbar-ewm {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.toolbar .toolbar-item-weixin {
+  background-position: 0 -798px;
+}
+.toolbar .toolbar-item-weixin:hover {
+  background-position: 0 -860px;
+}
+.toolbar .toolbar-item-weixin .toolbar-ewm {
+  height: 212px;
+}
+.toolbar .toolbar-item-feedback {
+  background-position: 0 -426px;
+}
+.toolbar .toolbar-item-feedback:hover {
+  background-position: 0 -489px;
+}
+.toolbar .toolbar-item-app {
+  background-position: 0 -550px;
+}
+.toolbar .toolbar-item-app:hover {
+  background-position: 0 -613px;
+}
+.toolbar .toolbar-item-app .toolbar-ewm {
+  height: 194px;
+  background-position: 0 -212px;
+}
+.toolbar .toolbar-item-top {
+  background-position: 0 -674px;
+}
+.toolbar .toolbar-item-top:hover {
+  background-position: 0 -737px;
+}
+
+.toolbar-ewm {
+  position: absolute;
+  width: 172px;
+  right: 52px;
+  bottom: -10px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: 95% 95%;
+  -moz-transform-origin: 95% 95%;
+  -ms-transform-origin: 95% 95%;
+  -o-transform-origin: 95% 95%;
+  transform-origin: 95% 95%;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  background: url("../images/toolbar.png") no-repeat;
+}

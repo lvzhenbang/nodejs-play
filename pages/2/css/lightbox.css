@@ -1,0 +1,17 @@
+*{margin: 0;padding: 0;}
+#container{padding: 200px;}
+#container img{border: 5px solid #000000;cursor: pointer;}
+
+#lightbox-mask{display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;opacity: 0.5;filter: alpha(opacity=50);background: #000000;z-index: 1000;}
+
+#lightbox-wrap{display: none;position: fixed;top: 0;left: 50%;width: 400px;height: 300px;padding: 10px;background: #ffffff url("../../../dist/images/loading.gif") no-repeat center;z-index: 10001;box-sizing: border-box;}
+#lightbox-wrap .lightbox-picture{position: relative;width: 100%;height: 100%;}
+#lightbox-wrap .lightbox-picture img{display: block;}
+#lightbox-wrap .lightbox-picture .lightbox-btn{display: none;position: absolute;top: 0;width: 40%;height: 100%;cursor: pointer;}
+#lightbox-wrap .lightbox-picture .prev-btn{left: 0;background: url("../../../dist/images/prev.png") no-repeat left center;}
+#lightbox-wrap .lightbox-picture .next-btn{right: 0;background: url("../../../dist/images/next.png") no-repeat right center;}
+
+#lightbox-wrap .lightbox-caption{position:relative;width: 100%;padding:10px 0;margin-top: -60px;background: rgba(0,0,0,0.5);}
+#lightbox-wrap .lightbox-caption .lightbox-caption-desc{color: #ffffff;}
+#lightbox-wrap .lightbox-caption .lightbox-caption-ind{color: #ffffff;}
+#lightbox-wrap .lightbox-caption .lightbox-close-btn{position: absolute;top: 15px;right: 10px;width: 27px;height: 27px;cursor: pointer;background: url("../../../dist/images/close.png") no-repeat center;}
