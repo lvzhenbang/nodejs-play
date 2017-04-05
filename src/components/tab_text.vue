@@ -9,7 +9,7 @@
       </div>
       <div class="list-item list-item-two">
         <span v-text="textRes"></span>
-        <a :href="item.url" v-text="item.url"></a>
+        <a class="text-overflow" :href="item.url" v-text="item.url"></a>
       </div>
       <div class="list-item">
         <span v-text="textDesc"></span>
@@ -101,6 +101,14 @@
     float:left;
     text-align: left;
     border-bottom: 1px solid #cecece;
+  }
+
+  .text-overflow{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
 
   @media screen and (max-width:749px){
