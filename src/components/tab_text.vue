@@ -103,7 +103,7 @@
     border-bottom: 1px solid #cecece;
   }
 
-  .text-overflow{
+  .list-item .text-overflow{
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
