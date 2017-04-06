@@ -78,6 +78,18 @@
       "url":"http://router.vuejs.org/zh-cn/index.html",
       "description":"使用 Vue.js + vue-router 使得创建单页应用变得容易起来。使用 Vue.js 时，我们已经把组件组合成一个应用了，当要把 vue-router 加进来，只需要配置组件和路由映射，然后告诉 vue-router 在哪里渲染它们。",
       "summarize":"router让你的单页面应用逻辑变得更清晰，同时使用它可以实现避免页面的刷新，又可以跳转到新的界面的效果。"
+    },
+    {
+      "title":"包学包会之浅如浅出",
+      "url":"https://www.qcloud.com/community/article/430630001490779316?fromSource=gwzcw.82687.82687.82687",
+      "description":"这个系列一共有三篇文章，包括开学篇、升学篇、结业篇，分别介绍了vue.js的环境搭建，vue.js的路由以及vuejs的组件化开发等相关的知识使用。",
+      "summarize":"这几篇文章我的收益主要是在结业篇的组件和模板的搭配使用"
+    },
+    {
+      "title":"dom知识结构",
+      "url":"http://naotu.baidu.com/file/ca6e38c7cdd230e6dad18d663956b684?token=1f6bc85ef75bff5d",
+      "description":"这是一张关于dom结构的思维导图，dom结构也就是我们以前和现在经常用的，也即是我们使用jquery，zepto.js操作的网页中的DOM结构，也即是在mvvm框架未出现前我们经常接触的实现修改的dom。",
+      "summarize":"补充：zepto.js,juqery的核心思想是使用是DOM结构驱动，mvvm框架采用的思想是数据结构驱动，常见的mvvm框架有angular.js, vue.js, react.js等。"
     }
   ],
   "demo":[
@@ -100,9 +112,9 @@
       "summarize":"做一个路由嵌套的demo试一下手。"
     },
     {
-      "title":"关于我这个个人blog",
-      "url":"地址暂无，正在完善中",
-      "description":"这个是我接触、了解、认识、使用、研究后的第一个使用Vuejs做的比较全面的案例，在这个案例中我是用了vue, vue-router, vue-resource, axios, vue-infinite-scrol, vuex等技术点后的一个比较全的案例。",
+      "title":"关于我的个人blog",
+      "url":"https://lvzhenbang.github.io/lvzhenbang.io",
+      "description":"这个是我接触、了解、认识、使用、研究后的第一个使用Vuejs做的比较全面的案例，在这个案例中我是用了vue, vue-router, vue-resource, vue-infinite-scrol, vuex等技术点后的一个比较全的案例。",
       "summarize":"这个案例的实现让我对vuejs有了更深的认识，也使得我将vuejs相关的知识点串了起来。"
     }
   ]
