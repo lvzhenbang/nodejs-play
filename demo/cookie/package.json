@@ -1,0 +1,23 @@
+{
+  "name": "cookie",
+  "version": "1.0.0",
+  "description": "express cookie",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node main.js",
+    "supervisor": "supervisor --harmony main.js"
+  },
+  "keywords": [
+    "epxress"
+  ],
+  "author": "lvzhenbang",
+  "license": "MIT",
+  "dependencies": {
+    "connect-redis": "^3.3.3",
+    "cookie-parser": "^1.4.3",
+    "eventproxy": "^1.0.0",
+    "express": "^4.16.2",
+    "express-parser": "^1.0.0",
+    "express-session": "^1.15.6"
+  }
+}
