@@ -24,4 +24,17 @@
 
 [express 中间件](https://github.com/lvzhenbang/nodejs-play/blob/master/express/express-middleware.md)
 
+[express引入session和cookie](https://github.com/lvzhenbang/nodejs-play/blob/master/express/express-cookie-session.md)
+
+[epxress实现登陆注册](https://github.com/lvzhenbang/nodejs-play/blob/master/express/express-login.md)
+
+### mongoose
+
+[如何在express项目中引入mongodb](https://github.com/lvzhenbang/nodejs-play/blob/master/mongoose/mongoose-init.md)
+
+[mongoose 中的 models 理解](https://github.com/lvzhenbang/nodejs-play/blob/master/mongoose/models.md)
+
+[mongoose 中的 中间件（middleware） 理解](https://github.com/lvzhenbang/nodejs-play/blob/master/mongoose/middleware.md)
+
+
 
