@@ -1,4 +1,4 @@
-## express-session
+## express中的session与cookie
 
 ### 无状态的http
 
@@ -31,7 +31,7 @@ secure：当 secure 值为 true 时，在 HTTPS 中才有效；反之，cookie �
 httpOnly：浏览器不允许脚本操作 document.cookie 去更改 cookie。设置为true可以避免被 xss 攻击拿到 cookie
 ```
 
-参考cookie-parser中的例子，实现一个记住访问路径的cookie例子。
+参考[cookie-parser](https://github.com/expressjs/cookie-parser)中的例子，实现一个记住访问路径的demo，代码如下：
 
 ```
 var path = require('path');
@@ -63,7 +63,7 @@ cookie-parser 还可以对Cookie数据进行加密，也就是我们所说的sig
 
 ### signedCookies
 
-是下代码如下：
+实现代码如下：
 
 ```
 var path = require('path');
@@ -86,11 +86,11 @@ app.get('/', function(req, res) {
 });
 ```
 
-从上面的代码中我们知道cooke-parser的第一个参数可以指定服务器端的私密，然后我们使用options中的signed配置项可实现加密。虽然这样相对安全，但是服务器端的Cookie有局限性，在客户端发送请求时会增加请求的数据量，不能实现数据的共享。
+从上面的代码中我们知道cooke-parser的第一个参数可以指定服务器端的提供的加密密匙，然后我们使用options中的signed配置项可实现加密。虽然这样相对安全，但是客户端的Cookie有局限性，在客户端发送请求时会增加请求头部的数据量，导致请求速度变慢；另外它不能实现数据的共享。
 
 ### session
 
-express-session 是expressjs的一个中间件用来创建session。它不像Cooke一样将用户数据保存在自身中，它使用了cookie保存了sessionid，而将用户数据保存在服务器端。
+express-session 是expressjs的一个中间件用来创建session。服务器端生成了一个sessionn-id，客户端使用了cookie保存了session-id这个加密的请求信息，而将用户请求的数据保存在服务器端，但是它也可以实现将用户的数据加密后保存在客户端。
 
 session记录的是客户端与服务端之间的会话状态，该状态用来确定客户端的身份。
 
@@ -104,7 +104,6 @@ session默认存放在内存中，存放在cookie中安全性太低，存放在�
 
 	npm i -S express-session
 
-
 在我们使用的项目页面模块中引入 express-session 插件，然后实例化它，如下：
 	
 ```
@@ -113,7 +112,7 @@ var session = require('express-session');
 var se = session(options);
 ```
 
-session()的参数options主要有：
+session()的参数options配置项主要有：
 
 ```
 name: 设置cookie中，保存session的字段名称，默认为connect.sid
@@ -130,7 +129,7 @@ cookie : 设置存放sessionid的cookie的相关选项
 
 ### cookie session
 
-cookie session 使用很简单就是我们在配置项中使用cookie配置项,就可以讲session数据保存在cookie中,它和signedCookies类似都是将数据保存在客户端,而且都对数据进行了加密，但是加密后的数据结构不一样。
+cookie session 使用很简单就是我们在配置项中使用cookie配置项,就可以将session数据保存在cookie中，它和signedCookies类似都是将数据保存在客户端，而且都对数据进行了加密，但是加密后的请求得到的数据结构不一样。
 
 cooke session 的结构如下：
 
@@ -194,7 +193,7 @@ app.listen(3030, function() {
 
 ### 数据库保存session
 
-用数据库保存session，我们一般使用redis，因为它是缓存数据库，查询速度更快。
+用数据库保存session，我们一般使用redis，因为它是缓存数据库，查询速度相较于非缓存的速度更快。
 
 express-session 的实例代码如下：
 
@@ -235,11 +234,13 @@ app.listen(3030, function() {
 });
 ```
 
-但有时，我们也使用非redis数据库保存session，这是我们就要对项目结构有深刻的认识，否则，反而会适得其反。
+但有时我们也使用非redis数据库保存session，这时我们就需要对项目结构有深刻的认识和理解；否则，使用后反而会适得其反。
 
-但我们要注意到单独使用数据库保存session存在浏览器关闭session-id会消失的问题，下次打开浏览器请求页面时，服务器依然不能识别请求者的身份。
+另外，我们要注意使用数据库保存session数据，在浏览器端的session-id会随着浏览器的关闭而消失，下次打开浏览器发送请求时，服务器依然不能识别请求者的身份。
 
-cookie session 虽然能解决这个问题，但是它本身存在着安全风险，其实cookie session 和 signedCookies都面临xss攻击
+cookie session 虽然能解决这个问题，但是它本身存在着安全风险，其实cookie session 和 signedCookies都面临xss攻击。
+
+其实，使用signedCookies和session的结合会在一定程度上降低这样的风险。
 
 ### signedCookies（cookies） 和 session的结合
 
@@ -288,3 +289,4 @@ app.listen(3030, function() {
 
 这样我们将session保存在redis中的信息，保存在了session_id所标示的客户端cooke中一份，这样我们就不用担心，浏览器关闭，cookie中的session_id字段就会消失的情况，因为浏览器中还有它的备份cookie，如果没有备份的cookie信息，下次客户端再次发出请求浏览就无法确定用户的身份。
 
+[参考源码](https://github.com/lvzhenbang/nodejs-play/blob/master/demo/cookie)
