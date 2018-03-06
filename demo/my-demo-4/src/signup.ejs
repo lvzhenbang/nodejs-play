@@ -1,0 +1,53 @@
+<%- include('common/header') %>
+    
+  <div class="sign">
+    <% if (typeof(msg) !== 'undefined' && msg) { %>
+    <div class="alert alert-error">
+      <a class="close" data-dismiss="alert" href="javascript:;">&times;</a>
+      <strong><%= msg %></strong>
+    </div>
+    <% } %>
+
+    <form class="form-horizontal" action="/signup" method="post">
+      <div class="control-group">
+        <label class="control-label" for="=reg_name">用户名</label>
+
+        <div class="controls">
+          <% if (typeof(name) !== 'undefined') { %>
+            <input class="input-xlarge" size="30" type="text" value="<%= name %>" name="reg_name"/>
+            <% } else { %>
+            <input class="input-xlarge" size="30" type="text" value="" name="reg_name"/>
+          <% } %>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="reg_password">密码</label>
+
+        <div class="controls">
+          <input class="input-xlarge" name="reg_password" size="30" type="password"/>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="re_password">确认密码</label>
+
+        <div class="controls">
+          <input class="input-xlarge" name="reg_re_password" size="30" type="password"/>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="email">电子邮箱</label>
+        <div class="controls">
+          <% if (typeof(email) !== 'undefined') { %>
+            <input class="input-xlarge" name="reg_email" size="30" type="text" value="<%= email %>"/>
+            <% } else { %>
+            <input class="input-xlarge" name="reg_email" size="30" type="text"/>
+            <% } %>
+        </div>
+      </div>
+      <div class="form-actions">
+        <input type="submit" class="span-primary" value="注册"/>
+      </div>
+    </form>
+  </div>
+
+<%- include('common/footer') %>

@@ -6,11 +6,11 @@
 
 [nodejs入门——开宗明义](https://github.com/lvzhenbang/nodejs-play/blob/master/node-base/introduce.md)
 
+[module的理解及使用](https://github.com/lvzhenbang/nodejs-play/blob/master/node-base/module.md)
+
 [require引入模块及注意事项](https://github.com/lvzhenbang/nodejs-play/blob/master/node-base/require.md)
 
 [export导出对象及注意事项](https://github.com/lvzhenbang/nodejs-play/blob/master/node-base/exports.md)
-
-[module的理解及使用](https://github.com/lvzhenbang/nodejs-play/blob/master/node-base/module.md)
 
 [如何理解并使用nodejs中的package](https://github.com/lvzhenbang/nodejs-play/blob/master/node-base/package.md)
 

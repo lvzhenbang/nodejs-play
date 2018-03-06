@@ -1,0 +1,16 @@
+<% include('common/header') %>
+
+<ul>
+<% for(var i = 0, len = user.length; i < len; i++) { %>
+	<li>
+		<span>用户名：<%= user[i].name %></span>
+		<span>年龄：<%= user[i].age %></span> 
+		<span>出生日期：<%= user[i].time %></span> 
+		<span>email: <%= user[i].email %></span> 
+	</li>
+<% } %>
+</ul>
+
+
+
+<% include('common/footer') %>

@@ -1,0 +1,22 @@
+.sign {
+	position: relative;
+	width: 60%;
+	margin: 20px auto 0;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	box-shadow: 0 3px 3px #ccc;
+}
+
+.sign .alert {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.sign>form{
+	padding: 60px 30px 30px;
+}
+
