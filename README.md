@@ -14,6 +14,10 @@
 
 [如何理解并使用nodejs中的package](https://github.com/lvzhenbang/nodejs-play/blob/master/node-base/package.md)
 
+[异步编程带来的问题](https://github.com/lvzhenbang/nodejs-play/blob/master/node-base/async-problem.md)
+
+[异步编程带来的问题](https://github.com/lvzhenbang/nodejs-play/blob/master/node-base/async-answer.md)
+
 ### 分析使用express
 
 [用express搭建一个demo](https://github.com/lvzhenbang/nodejs-play/blob/master/express/express-init.md)
