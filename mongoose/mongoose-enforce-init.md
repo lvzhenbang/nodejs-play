@@ -21,7 +21,7 @@ Mongo中的`Collections`相当于关系数据库中的表（tables），它包�
 
 `Documents`相当于SQL中的`记录`（records）或者`行`（rows）。在SQL中需要用多个表，通过数据间的引用来表达数据间的关联，但是在Mongo中可以通过一个`Document`来实现。
 
-![NoSQL的Documents VS SQL 中的关联Tables](https://cdn-images-1.medium.com/max/600/0*rcotALFe2LeebN_y.)
+![NoSQL的Documents VS SQL 中的关联Tables](https://github.com/lvzhenbang/nodejs-play/blob/master/imgs/mongo-sql.png)
 
 > Schema
 
@@ -95,7 +95,7 @@ let mongoose = require('mongoose')
 // 连接到demo测试数据库
 mongoose.connect('mongodb://127.0.0.1:27017/demo')
 // 定义并实例化一个Schema
-let userSchema = new mongoose.Schema({
+let UserSchema = new mongoose.Schema({
   firstname: String,
   lastname: String
 })
@@ -128,7 +128,7 @@ person
 ### 查看数据
 
 ```
-userModel
+UserModel
   .find({
     lastname: '苏'   // query
   })
@@ -143,7 +143,7 @@ userModel
 ### 更新数据
 
 ```
-userModel
+UserModel
   .findOneAndUpdate(
     {
       lasttname: '苏'  // query
@@ -166,7 +166,7 @@ userModel
 ### 删除数据
 
 ```
-userModel
+UserModel
   .findOneAndRemove({
     firstname: '东坡'
   })
