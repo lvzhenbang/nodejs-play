@@ -98,7 +98,7 @@ let UserSchema = new mongoose.Schema({
 而mongoose就存在这样的机制，可以在`Schema`的实例上添加`pre`的方法，代码如下：
 
 ```
-UserSchema.pre('findOneAndUpdate', function(next) {
+UserSchema.pre('save', function(next) {
   let now = Date.now()
   this.updateAt = now;
 
