@@ -103,6 +103,7 @@ UserSchema.pre('save', function(next) {
   this.updateAt = now;
 
   if (!this.createAt) this.createAt = now;
+  next()
 })
 ```
 
