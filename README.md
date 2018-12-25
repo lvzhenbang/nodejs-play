@@ -27,6 +27,6 @@
 * [mongoose 中的 models 理解](https://github.com/lvzhenbang/nodejs-play/blob/master/mongoose/models.md)
 * [mongoose 中的 中间件（middleware） 理解](https://github.com/lvzhenbang/nodejs-play/blob/master/mongoose/middleware.md)
 * [mongoose 再认识（一）](https://github.com/lvzhenbang/nodejs-play/blob/master/mongoose/mongoose-enforce-init.md)
-
-
+* [mongoose 再认识（二）](https://github.com/lvzhenbang/nodejs-play/blob/master/mongoose/mongoose-helpers.md)
+* [mongoose 再认识（三）](https://github.com/lvzhenbang/nodejs-play/blob/master/mongoose/mongoose-plugin.md)
 
