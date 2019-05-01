@@ -27,26 +27,29 @@ var request = require('request');
 var async = require('async')
 
 var downloadImage = function(src, dest, callback) {
-  request.head(src, function(err, res, body) {
-    if (err) {
-      console.log('request: ' + err)
-    } else {
-      dest = path.join(__dirname, dest);
-      var arr = dest.split(path.sep);
-      for (var i=0; i<arr.length; i++) {
-    
-        var dir = path.join.apply(null, arr.slice(0, i));
-        // dir stat
-        fs.existsSync(dir) || fs.mkdirSync(dir)  
+  request(
+    { src },
+    function(err, res, body) {
+      if (err) {
+        console.log('request: ' + err)
+      } else {
+        dest = path.join(__dirname, dest);
+        var arr = dest.split(path.sep);
+        for (var i=0; i<arr.length; i++) {
+      
+          var dir = path.join.apply(null, arr.slice(0, i));
+          // dir stat
+          fs.existsSync(dir) || fs.mkdirSync(dir)  
+        }
+        // download
+        request(src)
+          .pipe(fs.createWriteStream(dest))
+          .on('close', function() {
+            callback(null, dest);
+          });
       }
-      // download
-      request(src)
-        .pipe(fs.createWriteStream(dest))
-        .on('close', function() {
-          callback(null, dest);
-        });
     }
-  });
+  );
 };
 
 var data = [
