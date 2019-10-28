@@ -34,3 +34,6 @@
 * [` mongoose 再认识（二） `](https://github.com/lvzhenbang/nodejs-play/blob/master/mongoose/mongoose-helpers.md)
 * [` mongoose 再认识（三） `](https://github.com/lvzhenbang/nodejs-play/blob/master/mongoose/mongoose-plugin.md)
 
+## 参考资料
+
+* [` nodejs 最佳实践 `](https://github.com/goldbergyoni/nodebestpractices)
