@@ -37,3 +37,40 @@ mongorestore
 ```
 mongorestore --db=demo --collection=users --out=d:/data/backup/demo.json
 ```
+
+## 为指定数据库闯将用户（for windows）
+
+* 在`./bin/mongod.cfg `中，找到` security `，然后参考[` mongo doc `](https://docs.mongodb.com/manual/core/security-internal-authentication/)配置`./bin/mongod.cfg `；然后，用[` db.createUser `](https://docs.mongodb.com/manual/reference/method/db.createUser/)方法创建。
+
+`mongod.cfg`示例如下：
+
+```
+...
+# network interfaces
+net:
+  port: 27017
+  bindIp: 127.0.0.1
+
+
+#processManagement:
+
+security:
+  authorization: enabled
+
+#operationProfiling:
+...
+```
+
+shell代码为名字是` test `数据库创建用户，用户名为` testUser256 `。
+
+```
+use test
+db.createUser({
+  user: "testUser256",
+  pwd: passwordPrompt(),
+  roles: [ { role: "readWrite", db: "test" } ],
+  mechanisms: [ "SCRAM-SHA-256" ]
+})
+```
+
+注：未配置` security.authorization `新创建的用户不起作用。
