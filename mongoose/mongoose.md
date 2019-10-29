@@ -87,3 +87,6 @@ const Kitty = new Cat({name: 'jmmy', age: 3});
 Kitty.save().then((err, kitty) => kitty.speak())
 ```
 
+## 高级用法
+
+* [` mongoose populate `](./mongoose.populate.md)
