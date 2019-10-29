@@ -74,3 +74,5 @@ db.createUser({
 ```
 
 注：未配置` security.authorization `新创建的用户不起作用。
+
+注：db.dropAllUsers( {w: "majority", wtimeout: 5000} )

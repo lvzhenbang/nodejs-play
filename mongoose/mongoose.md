@@ -90,3 +90,4 @@ Kitty.save().then((err, kitty) => kitty.speak())
 ## 高级用法
 
 * [` mongoose populate `](./mongoose.populate.md)
+* [` mongoose validate `](./mongoose.validate.md)
