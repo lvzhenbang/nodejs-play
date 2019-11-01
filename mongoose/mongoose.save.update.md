@@ -5,6 +5,7 @@
 ### save
 
 * [` model.prototype.save() `](https://mongoosejs.com/docs/api/model.html#model_Model-save)
+* [` document.prototype.save() `](https://mongoosejs.com/docs/api/document.html#document_Document-save)
 
 ### update
 
@@ -12,6 +13,8 @@
 * [` model.prototype.updateMany() `](https://mongoosejs.com/docs/api/model.html#model_Model.updateMany)
 * [` query.prototype.update() `](https://mongoosejs.com/docs/api/query.html#query_Query-update)
 * [` query.prototype.updateMany() `](https://mongoosejs.com/docs/api/query.html#query_Query-updateMany)
+* [` document.prototype.update() `](https://mongoosejs.com/docs/api/document.html#document_Document-update)
+* [` docuemnt.prototype.updateOne() `](https://mongoosejs.com/docs/api/document.html#document_Document-updateOne)
 
 ### findOneAndUpdate
 
